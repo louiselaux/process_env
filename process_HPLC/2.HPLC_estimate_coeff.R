@@ -91,5 +91,5 @@ hplccomb_allpoints<- hplccomb_allpoints|> mutate(diatoms=(1.88*fuco)/SDPw,
 )
 ###### Step 3: Save the final data table#####
 
-hplc_coeffs<- hplccomb_allpoints
+hplc_coeffs<- hplccomb_allpoints %>% mutate( date= as.Date(date, format =("%d/%m/%y")))
 hplc_coeffs<- write_tsv(hplc_coeffs, file="output/hplc_coeffs.tsv")
