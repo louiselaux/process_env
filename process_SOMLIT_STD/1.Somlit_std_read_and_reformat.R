@@ -76,7 +76,7 @@ dl|> filter(depth==10)|> filter(name%in%c("CHLA","COP","MES","NH4","NO2","NO3","
 
 # Remove irrelevant/too short variables
 dl <- dl |> 
-  filter(!name %in% c("CN", "DC13", "DN15", "Fluo", "NH4", "O2ctd", "O2sat", "PAR", "PHEO")) |> 
+  filter(!name %in% c("CN", "DC13", "DN15", "Fluo", "NH4", "O2ctd", "O2sat", "PAR")) |> 
   filter(date > "1967-01-01") # filter to have the date at which plankton starts
 
 
